@@ -11,11 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150618201434) do
+ActiveRecord::Schema.define(version: 20150618201610) do
 
   create_table "shoulds", force: :cascade do |t|
-    t.string   "context"
-    t.string   "user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
