@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'shoulds#index'
 
+  get 'users'       => 'users#index'
   get 'users/:user' => 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.

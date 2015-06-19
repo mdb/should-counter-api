@@ -9,6 +9,32 @@ RSpec.describe UsersController, type: :controller do
     Should.new(user: 'user', context: 'context').save
   end
 
+  describe '#index' do
+    before do
+      get :index
+    end
+
+    it 'returns success' do
+      expect(response).to be_success
+    end
+
+    it 'shows the Should instances grouped by user' do
+      expect(JSON.parse(response.body)['user'].length).to eq 1
+    end
+
+    context 'when there are multiple Should instances associated with the user' do
+      before do
+        Should.new(user: 'user', context: 'more context').save
+
+        get :index
+      end
+
+      it 'returns them all associated with the proper user' do
+        expect(JSON.parse(response.body)['user'].length).to eq 2
+      end
+    end
+  end
+
   describe '#show' do
     before do
       get :show, user: 'user'
