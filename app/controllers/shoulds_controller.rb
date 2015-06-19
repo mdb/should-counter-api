@@ -1,11 +1,15 @@
 class ShouldsController < ApplicationController
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+
   before_action :set_should, only: [:show]
+
+  http_basic_authenticate_with(
+    name: Rails.configuration.authorized_name,
+    password: Rails.configuration.authorized_password)
 
   # GET /shoulds
   def index
-    @shoulds = Should.all
-
-    render json: @shoulds
+    render json: Should.all
   end
 
   # GET /shoulds/1

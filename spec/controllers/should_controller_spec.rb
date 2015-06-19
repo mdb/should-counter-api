@@ -1,7 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe ShouldsController, type: :controller do
+  include AuthHelper
+
   before do
+    http_login
+
     Should.new(user: 'user', context: 'context').save
   end
 

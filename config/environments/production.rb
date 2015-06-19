@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.authorized_name = ENV['AUTHORIZED_NAME']
+  config.authorized_password = ENV['AUTHORIZED_PASSWORD']
 end

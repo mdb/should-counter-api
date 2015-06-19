@@ -22,5 +22,8 @@ module ShouldCounter
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.authorized_name = 'admin'
+    config.authorized_password = 'password'
   end
 end
