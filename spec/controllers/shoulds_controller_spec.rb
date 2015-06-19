@@ -26,7 +26,9 @@ RSpec.describe ShouldsController, type: :controller do
 
   describe '#show' do
     before do
-      get :show, id: 1
+      @first_should = Should.first
+
+      get :show, id: @first_should.id
     end
 
     it 'returns success' do
@@ -34,8 +36,8 @@ RSpec.describe ShouldsController, type: :controller do
     end
 
     it 'shows the correct Should instance' do
-      expect(JSON.parse(response.body)['user']).to eq 'user'
-      expect(JSON.parse(response.body)['context']).to eq 'context'
+      expect(JSON.parse(response.body)['user']).to eq @first_should.user
+      expect(JSON.parse(response.body)['context']).to eq @first_should.context
     end
   end
 
