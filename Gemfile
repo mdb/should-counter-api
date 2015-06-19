@@ -5,6 +5,7 @@ gem 'rails-api'
 gem 'spring', group: :development
 gem 'sqlite3'
 gem 'rspec-rails'
+gem 'rack', '1.6.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
