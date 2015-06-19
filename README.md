@@ -1,4 +1,4 @@
-# should-counter
+# should-counter-api
 
 > Computers don't understand what _should_ be; only what _is_. Behind use of the
 > word "should" lives the messy soup of human beliefs, feelings, perspective,
