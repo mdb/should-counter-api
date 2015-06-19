@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Should, type: :model do
   before :each do
-    @should = Should.new(user: 'mike', context: 'some should usage')
+    @should = Should.create(user: 'mike', context: 'some should usage')
   end
 
   describe '#user' do

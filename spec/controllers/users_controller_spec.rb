@@ -6,7 +6,7 @@ RSpec.describe UsersController, type: :controller do
   before do
     http_login
 
-    Should.new(user: 'user', context: 'context').save
+    Should.create(user: 'user', context: 'context')
   end
 
   describe '#index' do
@@ -24,7 +24,7 @@ RSpec.describe UsersController, type: :controller do
 
     context 'when there are multiple Should instances associated with the user' do
       before do
-        Should.new(user: 'user', context: 'more context').save
+        Should.create(user: 'user', context: 'more context')
 
         get :index
       end
@@ -51,7 +51,7 @@ RSpec.describe UsersController, type: :controller do
 
     context 'when there are multiple Should instances associated with the user' do
       before do
-        Should.new(user: 'user', context: 'more context').save
+        Should.create(user: 'user', context: 'more context')
 
         get :show, user: 'user'
       end

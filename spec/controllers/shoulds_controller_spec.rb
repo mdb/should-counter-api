@@ -6,7 +6,7 @@ RSpec.describe ShouldsController, type: :controller do
   before do
     http_login
 
-    Should.new(user: 'user', context: 'context').save
+    Should.create(user: 'user', context: 'context')
   end
 
   describe '#index' do
