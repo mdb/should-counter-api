@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mdb/should-counter-api.svg?branch=master)](https://travis-ci.org/mdb/should-counter-api)
+
 # should-counter-api
 
 > What _should_ technology do? Computers don't understand what _should_ be,
