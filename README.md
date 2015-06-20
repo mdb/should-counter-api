@@ -1,12 +1,16 @@
 # should-counter-api
 
-> Computers don't understand what _should_ be; only what _is_. Behind use of the
-> word "should" lives the messy soup of human beliefs, feelings, perspective,
-> culture, politics, and :turtle: :turtle: :turtle: all the way down.
+> What _should_ technology do? Computers don't understand what _should_ be,
+> only what _is_. Behind use of the word "should" lives the messy soup of human
+> beliefs on how the world ought to function: emotions, perspective, culture,
+> politics, and :turtle: :turtle: :turtle: all the way down.
 
-`should-counter-api` offers a REST API to track who says "should" the most on your software development team.
+`should-counter-api` offers a REST API to track "should" usage across your
+software development team.
 
-This puppy is intended to be used by a chat bot, or some other communications monitoring program.
+This puppy is intended to be used by a chat bot &mdash; maybe
+[shoulda-coulda](http://github.com/mdb/shoulda-coulda)? &mdash; or some other
+communications-monitoring program.
 
 ## Development
 
